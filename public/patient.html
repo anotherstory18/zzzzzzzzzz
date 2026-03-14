@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patient Panel</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="container">
+    <a href="/">← Back to Home</a>
+
+    <div class="card">
+      <h1>Patient Panel</h1>
+      <p class="small">Enter your token to check queue status and prescription.</p>
+      <div class="grid cols-2">
+        <div>
+          <label for="tokenInput">Token Number</label>
+          <input id="tokenInput" placeholder="Example: GEN-001" />
+        </div>
+        <div style="display:flex;align-items:end;">
+          <button class="btn" id="checkBtn">Check Status</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" id="statusCard" style="display:none;">
+      <h2>Your Queue Status</h2>
+      <div id="statusOutput"></div>
+    </div>
+  </div>
+
+  <script src="/patient.js"></script>
+</body>
+</html>

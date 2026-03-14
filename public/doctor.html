@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doctor Panel</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="container">
+    <a href="/">← Back to Home</a>
+
+    <div class="card">
+      <h1>Doctor Panel</h1>
+      <p class="small" id="queueCount">Patients left: 0</p>
+      <button class="btn secondary" id="refreshBtn">Refresh Queue</button>
+    </div>
+
+    <div class="card">
+      <h2>Queue</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Token</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="queueBody"></tbody>
+      </table>
+    </div>
+
+    <div class="card" id="recordCard" style="display:none;">
+      <h2>Patient Record</h2>
+      <div id="patientDetails" class="small"></div>
+      <div class="grid">
+        <div>
+          <label for="prescription">Prescription</label>
+          <textarea id="prescription" rows="4"></textarea>
+        </div>
+        <div>
+          <label for="doctorNotes">Doctor Notes</label>
+          <textarea id="doctorNotes" rows="3"></textarea>
+        </div>
+      </div>
+      <div style="margin-top: 12px; display:flex; gap: 8px;">
+        <button class="btn" id="savePrescriptionBtn">Save Prescription</button>
+        <button class="btn secondary" id="markDoneBtn">Mark as Done</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/doctor.js"></script>
+</body>
+</html>

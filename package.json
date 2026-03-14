@@ -1,0 +1,15 @@
+{
+  "name": "mini-hospital-workflow-system",
+  "version": "1.0.0",
+  "description": "Beginner-friendly hospital workflow app using Node.js, Express, and vanilla JS",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["hospital", "express", "vanilla-js"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reception Panel</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="container">
+    <a href="/">← Back to Home</a>
+    <div class="card">
+      <h1>Reception Panel</h1>
+      <p class="small">Register a patient and generate a token.</p>
+      <form id="patientForm" class="grid cols-2">
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" required />
+        </div>
+        <div>
+          <label for="age">Age</label>
+          <input id="age" name="age" type="number" min="0" required />
+        </div>
+        <div>
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender" required>
+            <option value="">Select</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="department">Department</label>
+          <select id="department" name="department" required>
+            <option value="">Select</option>
+            <option>General</option>
+            <option>Cardiology</option>
+            <option>Orthopedics</option>
+            <option>Pediatrics</option>
+            <option>Dermatology</option>
+          </select>
+        </div>
+        <div style="grid-column: 1 / -1;">
+          <label for="symptoms">Symptoms</label>
+          <textarea id="symptoms" name="symptoms" rows="3" required></textarea>
+        </div>
+        <div style="grid-column: 1 / -1;">
+          <button class="btn" type="submit">Register Patient</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="card" id="slipCard" style="display:none;">
+      <h2>Patient Slip</h2>
+      <pre id="slipText"></pre>
+    </div>
+  </div>
+
+  <script src="/reception.js"></script>
+</body>
+</html>
